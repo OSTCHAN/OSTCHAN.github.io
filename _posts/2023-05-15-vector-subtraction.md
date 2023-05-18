@@ -4,7 +4,8 @@ title: "突然意识到的 真的很trivial的 向量减法"
 subtitle: "Trivial Vector Subtraction"
 author: "Kafka"
 header-style: text
-# multilingual: true
+multilingual: true
+mathjax: true
 tags:
   - 突然想到的
 ---
