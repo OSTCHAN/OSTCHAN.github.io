@@ -3,6 +3,7 @@ layout: post
 title: "突然意识到的 真的很trivial的 向量减法"
 subtitle: "Trivial Vector Subtraction"
 author: "Kafka"
+date: 2023-05-15
 header-style: text
 multilingual: true
 mathjax: true

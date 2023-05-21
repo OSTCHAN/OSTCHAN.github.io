@@ -1,80 +1,54 @@
 ---
 layout: post
-title: "取模/求余运算的区别（未检查|未完成）"
+title: "Difference Between Modulo&Remainder Operation"
 subtitle: "modulo(remainder) operation"
 author: "Kafka"
+date: 2023-05-14
 header-style: text
+# multilingual: true
+mathjax: true
 tags:
   - Trivial?
 ---
 
-> 核心文字内容出处：[百度百科](https://baike.baidu.com/item/%E5%8F%96%E6%A8%A1%E8%BF%90%E7%AE%97/10739384?fr=aladdin#:~:text=%E5%BA%94%E7%94%A8-,%E5%8F%96%E4%BD%99%E8%BF%90%E7%AE%97%E5%8C%BA%E5%88%AB,-%E7%BC%96%E8%BE%91)
+> reference: [BaiduBaike](https://baike.baidu.com/item/%E5%8F%96%E6%A8%A1%E8%BF%90%E7%AE%97/10739384?fr=aladdin#:~:text=%E5%BA%94%E7%94%A8-,%E5%8F%96%E4%BD%99%E8%BF%90%E7%AE%97%E5%8C%BA%E5%88%AB,-%E7%BC%96%E8%BE%91)
 
-取模/求余运算的区别
+The difference between modulo and remainder operation
 ------
 
-对于整型数a，b来说，取模运算或者求余运算的方法都是：
+Begin with the conclusion: 
+* The *sign* & specific *result* of the operation depend on the specific type of operation. 
+* E.g. the sign of modulo rely on *divisor*, yet the sign of remainder depend on *dividend*.
+* The result of modulo depend on integer quotient calculation with `floor()` function, as to the remainder, otherwise depend on the same calculation but using `fix()`.
 
-1.求整数商： c = [a/b];
+For integer $\text{a}$ and $\text{b}$, steps of modulo operation or remainder operation are both as follows:
 
-2.计算模或者余数： r = a - c*b.
+1. Find integer quotient: $\text{c}$ = [$\text{a}$ $\div$ $\text{b}$];
 
-求模运算和求余运算在第一步不同: 取余运算在取c的值时，向0 方向舍入(fix()函数)；而取模运算在计算c的值时，向负无穷方向舍入(floor()函数)。
+2. Calculate modulo or remainder: r = $\text{a}$ $-$ $\text{c}$ $\times$ $\text{b}$.
 
-例1.计算：-7 Mod 4
+Modulo operation differ from remainder operation in the first step: 
+* In modulo operation, the value of $\text{c}$ is rounded towards negative infinity(`floor()`) as calculating its value.
+* In remainder operation, the value of $\text{c}$ is rounded towards $0$(`fix()`) as calculating its value.
 
-那么：a = -7；b = 4；
+Example 1. Calculate: -7 Mod 4
 
-第一步：求整数商c：
+then: $\text{a}$ = -7; $\text{b}$ = 4; 
 
-①进行求模运算时：c = [a/b] = -7 / 4 = -2（向负无穷方向舍入），
+First step: evaluate integer quotient $\text{c}$
 
-②进行求余运算时：c = [a/b] = -7 / 4 = -1（向0方向舍入）；
+①modulo operation: $\text{c}$ = [$\text{a}$ $\div$ $\text{b}$] = -7  $\div$  4 = -2(rounded towards negative infinity), 
 
-第二步：计算模和余数的公式相同，但因c的值不同，
+②remainder operation: $\text{c}$ = [$\text{a}$ $\div$ $\text{b}$] = -7  $\div$  4 = -1(rounded towards $0$); 
 
-①求模时：r = a - c*b =-7 - (-2)*4 = 1，
+Step two: same formula with different value of $\text{c}$
 
-②求余时：r = a - c*b = -7 - (-1)*4 =-3。
+①modulo operation: r = $\text{a}$ $-$ $\text{c}$ $\times$ $\text{b}$ =-7 $-$ (-2) $\times$ 4 = 1, 
 
-例2.计算：7 Mod 4
+②remainder operation: r = $\text{a}$ $-$ $\text{c}$ $\times$ $\text{b}$ = -7 $-$ (-1) $\times$ 4 =-3。
 
-那么：a = 7；b = 4
-
-第一步：求整数商c：
-
-①进行求模运算c = [a/b] = 7 / 4 = 1
-
-②进行求余运算c = [a/b] = 7 / 4 = 1
-
-第二步：计算模和余数的公式相同
-
-①求模时：r = a - c*b =7 - (1)*4 = 3，
-
-②求余时：r = a - c*b = 7 - (1)*4 =3。
-
-归纳：当a和b正负号一致时，求模运算和求余运算所得的c的值一致，因此结果一致。
-
-当正负号不一致时，结果不一样。
-
-另外各个环境下%运算符的含义不同，比如c/c++，java 为取余，而python则为取模。
-
-补充：
-
-7 mod 4 = 3（商 = 1 或 2，1<2，取商=1）
-
--7 mod 4 = 1（商 = -1 或 -2，-2<-1，取商=-2）
-
-7 mod -4 = -1（商 = -1或-2，-2<-1，取商=-2）
-
--7 mod -4 = -3（商 = 1或2，1<2，取商=1）
-
-这里模是4，取模其实全称应该是取模数的余数，或取模余。
-
-增加补充内容（以上五行）后，被修改商值，但是括号内容不变，出现奇怪矛盾。
-
-在python下 % 运算符代表取模，如要修改，请先用python做
-
--7 % 4
-
-运算，或其它语言做取模运算验证，理解后再动手。
+![1](/img/posts-img/modulo_1.png)
+***
+![2](/img/posts-img/modulo_2.png)
+***
+![3](/img/posts-img/modulo_3.png)
