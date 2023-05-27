@@ -47,43 +47,16 @@ $$
 
 ---
 
-### 带皮亚诺余项的泰勒展开式
-
-在数学中，带皮亚诺余项的泰勒展开式是一种更准确的近似表示方式，它使用泰勒展开的前几项来逼近一个函数，并给出了估计误差的上界。下面是常见函数的带皮亚诺余项的泰勒展开式示例：
-
-#### 正弦函数的带皮亚诺余项的泰勒展开式
-
-正弦函数的带皮亚诺余项的泰勒展开式可以表示为：
-
 $$
-\sin(x) = x - \frac{{x^3}}{{3!}} + \frac{{x^5}}{{5!}} - \frac{{x^7}}{{7!}} + \cdots + \frac{{(-1)^n x^{2n+1}}}{{(2n+1)!}} + R_n(x)
+\begin{align*}
+    &\text{If limit} \lim_{x \to 0} \frac{sin(x)}{e^x - a}(cos(x) - b) = 5 \text{, then a = \_ b = \_.} \\
+    &\text{The reason of why } a \text{ being 1 is because:} \\
+    &\text{The numerator } \{sin(x)(cos(x) - b)\} \text{ is approaching 0 as x going to 0, yet the entire result turn out to be a constant 5.} \\
+    &\text{It points out that the denominator } \{e^x - a\} \text{ must be 0 too. I.e., } e^x - a \Big|_{x \to 0} = 0\text{.} \\
+    &\text{Therefore, a is 1. (b is -4, btw)} \\
+    \\
+    &\text{Conclusion derived from the above is quite useful and common:} \\
+    &\text{Say if a limit of a fraction is a constant, and the numerator of that fraction happen to be 0 or } \infty \text{.} \\
+    &\text{In that case, the denominator corresponds with 0 or } \infty \text{.} \\
+\end{align*}
 $$
-
-其中 $R_n(x)$ 是皮亚诺余项，表示估计误差的上界。
-
-#### 指数函数的带皮亚诺余项的泰勒展开式
-
-指数函数的带皮亚诺余项的泰勒展开式可以表示为：
-
-$$
-e^x = 1 + x + \frac{{x^2}}{{2!}} + \frac{{x^3}}{{3!}} + \frac{{x^4}}{{4!}} + \cdots + \frac{{x^n}}{{n!}} + R_n(x)
-$$
-
-#### 自然对数函数的带皮亚诺余项的泰勒展开式
-
-自然对数函数的带皮亚诺余项的泰勒展开式可以表示为：
-
-$$
-\ln(1 + x) = x - \frac{{x^2}}{{2}} + \frac{{x^3}}{{3}} - \frac{{x^4}}{{4}} + \cdots + \frac{{(-1)^{n-1} x^n}}{{n}} + R_n(x)
-$$
-
-#### 正切函数的带皮亚诺余项的泰勒展开式
-
-正切函数的带皮亚诺余项的泰勒展开式可以表示为：
-
-$$
-\tan(x) = x + \frac{{x^3}}{{3}} + \frac{{2x^5}}{{15}} + \frac{{17x^7}}{{315}} + \cdots + \frac{{B_{2n} (-4)^n (1 - 4^n)}}{{(2n)!}} x^{2n-1} + R_{2n}(x)
-$$
-
-其中 $B_{2n}$ 是伯努利数，$R_{2n}(x)$ 是皮亚诺余项。
-
