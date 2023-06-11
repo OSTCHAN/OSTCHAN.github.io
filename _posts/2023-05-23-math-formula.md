@@ -48,6 +48,20 @@ $$
 \end{align*}
 $$
 
+**碎碎念：**
+* $1^{\infty}$ 的limit是 $1$；
+* $(\text{Greater Than 1})^{\infty}$ 的limit是 $\infty$；
+* $(\text{Fraction})^{\infty}$ 的limit是 $0$；
+* $(1 + \frac{1}{\infty})^{\infty}$ 的limit是自然对数 $e$；
+* $(1 + \frac{1}{-\infty})^{\infty}$ 的limit是 $\displaystyle \frac{1}{e}$ // 用上面的$\text{Common Way}$即可推出。
+
+**intuition:** 
+
+1加的数，可以看作是一种*利率*，即 $(1+\text{rate})^{\infty}$，利率是positive时，无穷次增长自然会得到无穷；同理利率是negative时，则会亏损。当利率被限制在0-1之间时，数学上讲，无穷次亏损后结果应该是0，因为你总是亏比本金少的钱，类似于无限细分。
+
+$(1 + \frac{1}{\infty})^{\infty}$ 这个特殊之处在于：无穷次增长的同时，它的*利率/增长率*是趋近于0的。换句话说是，它到最后就基本不（负）增长了，会趋向一个定值。也就是自然对数 $e$ 或 $\displaystyle \frac{1}{e}$（如果是负增长的话）。
+
+
 ---
 
 If limit $\displaystyle \lim_{x \to 0} \frac{sin(x)}{e^x - a}(cos(x) - b) = 5$, then $a$ $=$ \_, $b$ $=$ \_.
