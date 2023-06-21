@@ -8,7 +8,7 @@ header-style: text
 # multilingual: true
 mathjax: true
 tags:
-  - Trivial?
+	- Trivial?
 ---
 
 就“若 $\displaystyle \lim_{x \to 0} \frac{sin6x+xf(x)}{x^3}=0$, 则 $\displaystyle \lim_{x \to 0} \frac{6+f(x)}{x^2}$为？” 此题简单解释为什么等价无穷小代换会出错的【一个视角】
@@ -20,10 +20,10 @@ tags:
 * Taylor formula展开到3阶： 
 $$
 \begin{align*}
-    \text{}\\
-    \displaystyle &sinx = x - \frac{x^3}{3!} + o(x^3) \\
-    \\
-    \therefore~~&sin6x = 6x -36x^3 +o(x^3) \\
+	\text{}\\
+	\displaystyle &sinx = x - \frac{x^3}{3!} + o(x^3) \\
+	\\
+	\therefore~~&sin6x = 6x -36x^3 +o(x^3) \\
 \end{align*}
 $$
 
@@ -35,14 +35,14 @@ $$
 **错误的做法**（直接用等价无穷小替换 $sin6x$ 为 $6x$）：
 $$
 \begin{align*}
-    \text{given equation = } \lim_{x \to 0} \frac{6x +xf(x)}{x^3} = \lim_{x \to 0} \frac{6 + f(x)}{x^2} = 0 \qquad \text{*Which's Wrong!*} \tag{1}
+	\text{given equation = } \lim_{x \to 0} \frac{6x +xf(x)}{x^3} = \lim_{x \to 0} \frac{6 + f(x)}{x^2} = 0 \qquad \text{*Which's Wrong!*} \tag{1}
 \end{align*}
 $$
 
 然后用Taylor展开看看在代换的过程中我们具体做(错)了什么：
 $$
 \begin{align*}
-    \text{given equation = } \lim_{x \to 0} \frac{(6x - 36x^3 + o(x^3)) + xf(x)}{x^3} \tag{2}
+	\text{given equation = } \lim_{x \to 0} \frac{(6x - 36x^3 + o(x^3)) + xf(x)}{x^3} \tag{2}
 \end{align*}
 $$
 

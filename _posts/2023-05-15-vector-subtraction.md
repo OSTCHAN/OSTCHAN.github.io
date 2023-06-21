@@ -8,17 +8,17 @@ header-style: text
 multilingual: true
 mathjax: true
 tags:
-  - 突然想到的
+	- 突然想到的
 ---
 
 <!-- Chinese Version -->
 <div class="zh post-container">
-    {% capture about_zh %}{% include posts/2023-05-15-vector-subtraction/zh.md %}{% endcapture %}
-    {{ about_zh | markdownify }}
+	{% capture about_zh %}{% include posts/2023-05-15-vector-subtraction/zh.md %}{% endcapture %}
+	{{ about_zh | markdownify }}
 </div>
 
 <!-- English Version -->
 <div class="en post-container">
-    {% capture about_en %}{% include posts/2023-05-15-vector-subtraction/en.md %}{% endcapture %}
-    {{ about_en | markdownify }}
+	{% capture about_en %}{% include posts/2023-05-15-vector-subtraction/en.md %}{% endcapture %}
+	{{ about_en | markdownify }}
 </div>
