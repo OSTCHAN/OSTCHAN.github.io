@@ -8,7 +8,7 @@ header-style: text
 # multilingual: true
 mathjax: true
 tags:
-	- Trivial?
+  - Trivial?
 ---
 
 $1-1$ pattern:

@@ -8,7 +8,7 @@ header-style: text
 # multilingual: true
 mathjax: true
 tags:
-	- Trivial?
+  - Trivial?
 ---
 
 就“若 $\displaystyle \lim_{x \to 0} \frac{sin6x+xf(x)}{x^3}=0$, 则 $\displaystyle \lim_{x \to 0} \frac{6+f(x)}{x^2}$为？” 此题简单解释为什么等价无穷小代换会出错的【一个视角】

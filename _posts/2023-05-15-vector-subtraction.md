@@ -8,7 +8,7 @@ header-style: text
 multilingual: true
 mathjax: true
 tags:
-	- 突然想到的
+  - 突然想到的
 ---
 
 <!-- Chinese Version -->

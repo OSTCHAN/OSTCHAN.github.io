@@ -8,7 +8,7 @@ header-style: text
 # multilingual: true
 mathjax: true
 tags:
-	- Trivial?
+  - Trivial?
 ---
 
 > reference: [BaiduBaike](https://baike.baidu.com/item/%E5%8F%96%E6%A8%A1%E8%BF%90%E7%AE%97/10739384?fr=aladdin#:~:text=%E5%BA%94%E7%94%A8-,%E5%8F%96%E4%BD%99%E8%BF%90%E7%AE%97%E5%8C%BA%E5%88%AB,-%E7%BC%96%E8%BE%91)
