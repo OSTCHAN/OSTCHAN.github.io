@@ -96,10 +96,14 @@ layout: default
     </div>
 </article>
 
-<!-- add support for mathjax by voleking-->
-{% if page.mathjax %}
+<!-- support mathjax BY DEFAULT(added by kafka) -->
+{% include mathjax_support.html %}
+<!-- previous code: -->
+<!-- add support for mathjax by voleking -->
+<!-- {% if page.mathjax %}
   {% include mathjax_support.html %}
-{% endif %}
+{% endif %} -->
+<!-- previous code END, uncomment to use -->
 
 {% if site.netease_comment %}
 <!-- 网易云跟帖JS代码 start -->
