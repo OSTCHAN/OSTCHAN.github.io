@@ -14,11 +14,11 @@ tags:
 $1-1$ pattern:
 $$
 \begin{align*}
-    &1-1 \qquad \text{/* may be considered as }(1+0)-1\text{ */} \\
-    \Rightarrow &e^{ln1}-1 \\
-    \Rightarrow &ln1 \\
-    \Rightarrow &ln(1+\alpha(x)) \Big|_{\alpha(x) \to 0} \\
-    \Rightarrow &\alpha(x) \Big|_{\alpha(x) \to 0} \\
+	&1-1 \qquad \text{/* may be considered as }(1+0)-1\text{ */} \\
+	\Rightarrow &e^{ln1}-1 \\
+	\Rightarrow &ln1 \\
+	\Rightarrow &ln(1+\alpha(x)) \Big|_{\alpha(x) \to 0} \\
+	\Rightarrow &\alpha(x) \Big|_{\alpha(x) \to 0} \\
 \end{align*}
 $$
 
@@ -27,8 +27,8 @@ $$
 $(1+x)^{a}-1$ pattern:
 $$
 \begin{align*}
-    &(1+x)^{a}-1 \sim ax \Big|_{x \to 0}\\
-    \text{Generalization: } &(1+\alpha(x))^{\beta(x)} - 1 \sim \alpha(x)\beta(x) \Big|_{\alpha(x) \to 0,~\alpha(x)\beta(x) \to 0}
+	&(1+x)^{a}-1 \sim ax \Big|_{x \to 0}\\
+	\text{Generalization: } &(1+\alpha(x))^{\beta(x)} - 1 \sim \alpha(x)\beta(x) \Big|_{\alpha(x) \to 0,~\alpha(x)\beta(x) \to 0}
 \end{align*}
 $$
 
@@ -37,14 +37,14 @@ $$
 $1^{\infty}$ Problem:
 $$
 \begin{align*}
-    \text{Common Way}:& \\
-    &(1+\alpha(x))^{\beta(x)} = e^{\alpha(x)\beta(x)} = e^{C} \\
-    \text{Condition}:& \\
-    &1.~\alpha(x) \to 0; \\
-    &2.~\beta(x)\to\infty \| \frac{1}{0}; \\
-    &3.~\alpha(x)\beta(x)=C; \\
-    \text{Breakdown}:& \\
-    &(1 + \alpha(x))^{\frac{\alpha(x)\beta(x)}{\alpha(x)}} = e^{C} \\
+	\text{Common Way}:& \\
+	&(1+\alpha(x))^{\beta(x)} = e^{\alpha(x)\beta(x)} = e^{C} \\
+	\text{Condition}:& \\
+	&1.~\alpha(x) \to 0; \\
+	&2.~\beta(x)\to\infty \| \frac{1}{0}; \\
+	&3.~\alpha(x)\beta(x)=C; \\
+	\text{Breakdown}:& \\
+	&(1 + \alpha(x))^{\frac{\alpha(x)\beta(x)}{\alpha(x)}} = e^{C} \\
 \end{align*}
 $$
 
@@ -103,18 +103,18 @@ Let $f(x)$ be twice differentiable (or say second derivative exists), $f(0) = 0,
 * *Method 1:*
 $$
 \begin{align*}
-    \lim_{x \to 0} \frac{f(x) - x}{x^{2}} &= \lim_{x \to 0} \frac{f'(x) - 1}{2x} \qquad \qquad \text{(L'Hôpital's rule)} \\
-        &= \frac{1}{2} \lim_{x \to 0} \frac{f'(x) - f'(0)}{x} \\
-        &= \frac{f^{(2)}(0)}{2} \qquad \qquad \text{(derivative's definition)} \\
-        &= 1.
+	\lim_{x \to 0} \frac{f(x) - x}{x^{2}} &= \lim_{x \to 0} \frac{f'(x) - 1}{2x} \qquad \qquad \text{(L'Hôpital's rule)} \\
+	&= \frac{1}{2} \lim_{x \to 0} \frac{f'(x) - f'(0)}{x} \\
+	&= \frac{f^{(2)}(0)}{2} \qquad \qquad \text{(derivative's definition)} \\
+	&= 1.
 \end{align*}
 $$
 * *Method 2:* Second-order Maclaurin's series with Peano remainder of $f(x)$:
 $$
 \begin{align*}
-    &f(x) = f(0) + f'(0)x + \frac{f^{(2)}(0)}{2!}x^2 + o(x^2), \\
-    i.e. \qquad &f(x) = x + x^2 + o(x^2). \\
-    then \qquad &\lim_{x \to 0} \frac{f(x) - x}{x^2} = \lim_{x \to 0} \frac{x^2 + o(x^2)}{x^2} = 1. \\
+	&f(x) = f(0) + f'(0)x + \frac{f^{(2)}(0)}{2!}x^2 + o(x^2), \\
+	i.e. \qquad &f(x) = x + x^2 + o(x^2). \\
+	then \qquad &\lim_{x \to 0} \frac{f(x) - x}{x^2} = \lim_{x \to 0} \frac{x^2 + o(x^2)}{x^2} = 1. \\
 \end{align*}
 $$
 
